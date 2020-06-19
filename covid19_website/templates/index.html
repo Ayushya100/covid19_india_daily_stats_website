@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID19 Cases</title>
+    <link rel="shortcut icon" href="{% static 'images/globe.jpg' %}">
+    <link rel="stylesheet" href="{% static 'styles/home.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<body style="background-color: black;">
+    
+    <nav class="navbar navbar-expand-sm bg-dark navbar-light">
+        <div class="container">
+            <ul class="navbar-nav">
+                <li class="nav-item" style="color: white;"><img src="{% static 'images/flag.webp' %}" alt="" style="width: 40px; height: 30px;"> India</li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item" style="color: white;"><img src="{% static 'images/logo.png' %}" alt="" style="width: 40px; height: 30px;"> Shadow_Works</li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container" style="text-align: center; margin-top: 230px;">
+        <a href="{% url 'india' %}"><button type="submit" class="btn btn-default btn_made col-xs-6" style="font-size: 20px; border-color: gray; color: white;">India</button></a>
+        <a href="{% url 'world' %}"><button type="submit" class="btn btn-default btn_made col-xs-6" style="font-size: 20px; border-color: gray; color: white;">Rest of the World</button></a>
+    </div>
+
+
+    <div class="footer_nav">
+        <div class="container" style="color: white; margin-top: 15px;">
+            <div class="card-deck" style="margin-left: 0px; margin-bottom: 20px;">
+                <div class="card" style="background-color: black;">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">Data Sources</h3>
+                        <a class="card-text link_made" href="https://www.trackcorona.live/api">TrackCorona</a>
+                        <br>
+                        <a class="card-text link_made" href="https://www.mohfw.gov.in/">Indian Government site</a>
+                    </div>
+                </div>
+                <div class="card" style="background-color: black;">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">API's used</h3>
+                        <a class="card-text link_made" href="https://www.trackcorona.live/api/countries">https://www.trackcorona.live/api/countries</a>
+                        <a class='card-text link_made' href="https://www.trackcorona.live/api/provinces">https://www.trackcorona.live/api/provinces</a>
+                        <a class="card-text link_made" href="https://www.trackcorona.live/api/cities">https://www.trackcorona.live/api/cities</a>
+                        <a class="card-text link_made" href="https://www.covid19india.org/demographics">https://www.covid19india.org</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr style="border-top: 1px solid red;">
+        <div class="inside">
+            <p>2020. Designed by Shadow_Works. Developed by Ayushya Jaiswal</p>
+        </div>
+    </div>
+
+</body>
+</html>
